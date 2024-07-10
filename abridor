@@ -1,0 +1,33 @@
+#parte 1
+arq = open('carros.txt', 'w')
+texto = ['gol', 'palio', 'ecosport']
+arq.writelines(texto)
+arq.close()
+
+i = -1
+i_lista = []
+for itens in texto:
+    i_lista.append(texto[i])
+    i = i-1
+print(i_lista)
+
+arq2 = open('carros2.txt', 'w')
+arq2.writelines(i_lista)
+arq2.close()
+
+#parte 2 - ordenar alfabeticamente
+
+alfabeto = ['a','e','g','p']
+lista_ordenada = []
+a = 0
+for palavra in texto:
+    if alfabeto[a] == palavra[0]:
+        lista_ordenada.append(palavra)
+    else:
+        print('não existe palavra que começa com a letra:', alfabeto[a])
+    a= a+1
+print(lista_ordenada)
+
+arq3 = open('carros3.txt', 'w')
+arq3.writelines(lista_ordenada)
+arq3.close()
